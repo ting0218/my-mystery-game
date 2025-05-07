@@ -1,0 +1,79 @@
+.character-c-img {
+  width: 400px !important;
+  height: 800px !important;
+  object-fit: cover !important;
+  position: relative !important;
+  top: 20px !important;
+  left: 10px !important;
+}
+
+.person-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* 水平置中 */
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+}
+
+
+.solve-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #7d5fff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.solve-button:hover {
+  background-color: #5a32fc;
+}
+.character-container {
+  position: relative;
+  display: inline-block;
+}
+
+.character-a-img {
+  width: 300px;
+  height: 600px;
+  object-fit: cover;
+}
+.person-page {
+  display: flex;
+  justify-content: center; /* 水平置中 */
+  align-items: center;     /* 垂直置中 */
+  height: 100vh;           /* 讓容器佔滿整個螢幕高度 */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+
+.character-text {
+  position: absolute;
+  top: 60%; /* 往下移動 */
+  left: 20px; /* 往右移動 */
+  background: rgba(255, 255, 255, 0.8); /* 白底，透明一點 */
+  color: black; /* 黑字 */
+  padding: 10px 15px;
+  border-radius: 8px;
+  opacity: 0; /* 預設隱藏 */
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* 讓滑鼠穿透到圖片 */
+}
+/* 當滑到人物圖時，文字出現 */
+.character-container:hover .character-text {
+  opacity: 1;
+}
+.answer-input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  width: 200px;
+  text-align: center;
+}

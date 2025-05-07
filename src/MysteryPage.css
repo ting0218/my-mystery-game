@@ -1,0 +1,96 @@
+.mystery-content {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+.password-input {
+  margin: 20px 0;
+}
+
+.password-input input {
+  padding: 10px;
+  font-size: 18px;
+  width: 200px;
+  margin-right: 10px;
+}
+
+.password-input button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.password-input button:hover {
+  background-color: #555;
+}
+
+.characters {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.character-img {
+  width: 100px;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.character-img:hover {
+  transform: scale(1.05);
+}
+.character-wrapper {
+  position: relative; /* 必須是 relative 才能讓內部文字絕對定位 */
+  display: inline-block;
+  margin: 10px;
+}
+
+.character-label {
+  background-color: white;
+  color: black;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 8px;
+  display: inline-block;
+}
+.character-label-overlay {
+  position: absolute;
+  top: 50%;        /* 調整上下位置 */
+  left: 50%;        /* 先定位到圖片中央 */
+  transform: translateX(-50%); /* 真正置中 */
+  background-color: rgba(255, 255, 255, 0.85);
+  color: black;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  z-index: 2;
+  white-space: nowrap;
+}
+.character-label-overlay {
+  position: absolute;
+  top: 50%;/* 調整人物ㄒ上下位置 */
+  left: 60%;
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
+  padding: 8px 12px;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 18px;
+}
+
+/* 讓滑鼠移到圖片上時，文字出現 */
+.character-wrapper:hover .character-label-overlay {
+  opacity: 1;
+}

@@ -1,3 +1,4 @@
+// App.jsx
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import MysteryPage from "./MysteryPage";
 import PersonA from "./PersonA";
@@ -8,7 +9,7 @@ import FinalPage from "./FinalPage";
 
 function App() {
   return (
-    <Router basename="/my-mystery-game">
+    <Router> {/* 移除 basename */}
       <Routes>
         <Route path="/" element={<MysteryPage />} />
         <Route path="/personA" element={<PersonA />} />
